@@ -188,6 +188,7 @@ const DesignConfigurator = ({
           }}
           onResizeStop={(_, __, ref, ___, { x, y }) => {
             setRenderedDimension({
+              // this logic bascially gets the width and height of the resized image ( also remove the "px" part)
               height: parseInt(ref.style.height.slice(0, -2)),
               width: parseInt(ref.style.width.slice(0, -2)),
             });
